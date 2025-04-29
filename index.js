@@ -13,6 +13,9 @@ app.use(cors("*"));
 
 dbconnect();
 
+app.get("/", (req, res) => {
+  res.send("Hello!");
+});
 app.use("/user", userroute);
 
 const port = process.env.PORT;
